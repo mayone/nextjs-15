@@ -25,15 +25,6 @@
   --muted-foreground: #a3a3a3;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --border: #262626;
-    --muted-foreground: #a3a3a3;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
