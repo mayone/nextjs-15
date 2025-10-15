@@ -11,6 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { useEffect, useState } from "react";
+import { useTheme } from "./ThemeProvider";
 
 const data = [
   { name: "Jan", value: 400, sales: 240 },
@@ -23,6 +24,7 @@ const data = [
 ];
 
 export default function SimpleLineChart() {
+  const { theme } = useTheme();
   const [themeColors, setThemeColors] = useState({
     foreground: "#171717",
     background: "#ffffff",
@@ -58,7 +60,7 @@ export default function SimpleLineChart() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [theme]);
 
   return (
     <div className="w-full h-[500px] p-4">
